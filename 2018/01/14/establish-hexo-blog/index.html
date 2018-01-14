@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="github,环境搭建," />
 
 
 
@@ -80,6 +80,7 @@
 
 
 <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;搭建博客的前提是你要有一个github账号，github官网地址，Hexo官网地址，因为github pages只支持静态页面，所以可以使用hexo来生成静态页面.编写博客最好使用markdown来编辑，所以需要懂得markdown的语法，markdown语法比较简单，几分钟就可以入门,这里推荐简书的一篇markdown使用博文,markdown编辑器博主这里使">
+<meta name="keywords" content="github,环境搭建">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用GitHub Pages与Hexo搭建博客">
 <meta property="og:url" content="https://zhuangzhizhi.github.io/2018/01/14/establish-hexo-blog/index.html">
@@ -90,7 +91,7 @@
 <meta property="og:image" content="https://zhuangzhizhi.github.io/2018/01/14/establish-hexo-blog/TIM截图20180114181039.png">
 <meta property="og:image" content="https://zhuangzhizhi.github.io/2018/01/14/establish-hexo-blog/TIM截图20180114201920.png">
 <meta property="og:image" content="https://zhuangzhizhi.github.io/2018/01/14/establish-hexo-blog/TIM截图20180114212649.png">
-<meta property="og:updated_time" content="2018-01-14T13:55:44.802Z">
+<meta property="og:updated_time" content="2018-01-14T16:11:15.527Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用GitHub Pages与Hexo搭建博客">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;搭建博客的前提是你要有一个github账号，github官网地址，Hexo官网地址，因为github pages只支持静态页面，所以可以使用hexo来生成静态页面.编写博客最好使用markdown来编辑，所以需要懂得markdown的语法，markdown语法比较简单，几分钟就可以入门,这里推荐简书的一篇markdown使用博文,markdown编辑器博主这里使">
@@ -102,7 +103,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -195,6 +196,36 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -277,6 +308,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/其他/实用技术/" itemprop="url" rel="index">
+                    <span itemprop="name">实用技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -330,7 +394,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
 <p>修改提供资源文件访问的配置选项，这样就可以访问图片资源了，参考：<a href="https://hexo.io/zh-cn/docs/asset-folders.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/asset-folders.html</a></p>
 <p>本地启动项目，默认4000端口(修改端口参考文章最后的常用hexo命令)，然后访问项目网址如:<a href="http://localhost:5888" target="_blank" rel="noopener">http://localhost:5888</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Administrator@zzz-pc MINGW64 /d/hexo-blog</span><br><span class="line">$ hexo server -p 5888 <span class="comment">#指定5888端口，默认为4000端口</span></span><br><span class="line">INFO  Start processing</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">WARN  ========================= ATTENTION! ==========================</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">WARN   NexT repository is moving here: https://github.com/theme-next</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">WARN   It<span class="string">'s rebase to v6.0.0 and future maintenance will resume there</span></span><br><span class="line"><span class="string">WARN  ===============================================================</span></span><br><span class="line"><span class="string">INFO  Hexo is running at http://localhost:5888/. Press Ctrl+C to stop.</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="编辑markdown文件，并部署到github仓库上"><a href="#编辑markdown文件，并部署到github仓库上" class="headerlink" title="编辑markdown文件，并部署到github仓库上"></a>编辑markdown文件，并部署到github仓库上</h3><p>项目目录结构如下</p>
+<h3 id="编辑markdown文件，并部署到github仓库上"><a href="#编辑markdown文件，并部署到github仓库上" class="headerlink" title="编辑markdown文件，并部署到github仓库上"></a>编辑markdown文件，并部署到github仓库上</h3><p>安装nodejs插件hexo-deployer-git自动部署工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>项目目录结构如下</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Administrator@zzz-pc MINGW64 /d/hexo-blog</span><br><span class="line">$ ll</span><br><span class="line">total 185</span><br><span class="line">-rw-r--r-- 1 Administrator 197121  1967 1月  14 17:13 _config.yml <span class="comment">#配置文件</span></span><br><span class="line">-rw-r--r-- 1 Administrator 197121 95641 1月  14 21:01 db.json</span><br><span class="line">drwxr-xr-x 1 Administrator 197121     0 1月  14 17:13 node_modules/ <span class="comment">#nodejs环境</span></span><br><span class="line">-rw-r--r-- 1 Administrator 197121   516 1月  14 17:13 package.json  </span><br><span class="line">drwxr-xr-x 1 Administrator 197121     0 1月  14 16:15 public/</span><br><span class="line">drwxr-xr-x 1 Administrator 197121     0 1月  14 14:38 scaffolds/</span><br><span class="line">drwxr-xr-x 1 Administrator 197121     0 1月  14 14:38 <span class="built_in">source</span>/ <span class="comment">#文章图片等资源目录</span></span><br><span class="line">drwxr-xr-x 1 Administrator 197121     0 1月  14 15:04 themes/ <span class="comment">#主题</span></span><br></pre></td></tr></table></figure>
 <p>cd进入source/_posts目录，这个目录存放在用户编辑博客的md和图片等资源文件</p>
 <p>使用命令hexo new [layout] &lt;title\&gt; 可以创建文章的md文件</p>
@@ -342,8 +408,10 @@
 <p>编辑好md文件，执行以下命令，部署项目到github上</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Administrator@zzz-pc MINGW64 /d/hexo-blog</span><br><span class="line">$ hexo clean <span class="comment">#清除目录，一般可以不需要执行</span></span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line"></span><br><span class="line">Administrator@zzz-pc MINGW64 /d/hexo-blog</span><br><span class="line">$ hexo g    <span class="comment">#生成静态资源文件，generate</span></span><br><span class="line"></span><br><span class="line">INFO  Start processing</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">WARN  ========================= ATTENTION! ==========================</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">Administrator@zzz-pc MINGW64 /d/hexo-blog</span><br><span class="line">$ hexo d    <span class="comment">#使用git，部署项目到github仓库master分支上</span></span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from public folder...</span><br><span class="line">INFO  Copying files from extend <span class="built_in">dirs</span>...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <p>访问自己github pages上的url</p>
-<p>hexo常用命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean    <span class="comment">#Cleans the cache file (db.json) and generated files (public)</span></span><br><span class="line">$ hexo generate || hexo -g  <span class="comment">#生成静态资源文件</span></span><br><span class="line">$ hexo deploy   || hexo -d  <span class="comment">#部署项目 -g选项 部署前生成静态资源文件</span></span><br><span class="line">$ hexo new [layout] &lt;title&gt; </span><br><span class="line">$ hexo server   <span class="comment">#启动服务器 -p 指定启动端口</span></span><br></pre></td></tr></table></figure></p>
-<p>参考：hexo命令 <a href="https://hexo.io/docs/commands.html" target="_blank" rel="noopener">https://hexo.io/docs/commands.html</a></p>
+<p>hexo常用命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean    <span class="comment">#Cleans the cache file (db.json) and generated files (public)</span></span><br><span class="line">$ hexo generate || hexo g  <span class="comment">#生成静态资源文件</span></span><br><span class="line">$ hexo deploy   || hexo d  <span class="comment">#部署项目 -g选项 部署前生成静态资源文件</span></span><br><span class="line">$ hexo new [layout] &lt;title&gt; </span><br><span class="line">$ hexo server   <span class="comment">#启动服务器 -p 指定启动端口</span></span><br></pre></td></tr></table></figure></p>
+<p>hexo命令参考：hexo命令 <a href="https://hexo.io/docs/commands.html" target="_blank" rel="noopener">https://hexo.io/docs/commands.html</a></p>
+<p>其他主题参考：<a href="http://theme-next.iissnan.com/getting-started.html#theme-settings" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html#theme-settings</a></p>
+<p>博客搭建参考：<a href="https://www.jianshu.com/p/3f0d2d907ea0" target="_blank" rel="noopener">https://www.jianshu.com/p/3f0d2d907ea0</a></p>
 
       
     </div>
@@ -358,6 +426,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/github/" rel="tag"># github</a>
+          
+            <a href="/tags/环境搭建/" rel="tag"># 环境搭建</a>
+          
+        </div>
       
 
       
@@ -464,7 +540,25 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -532,7 +626,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -631,6 +725,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
