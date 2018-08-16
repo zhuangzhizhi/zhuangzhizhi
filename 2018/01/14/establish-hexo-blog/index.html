@@ -91,7 +91,7 @@
 <meta property="og:image" content="https://zhuangzhizhi.github.io/2018/01/14/establish-hexo-blog/TIM截图20180114181039.png">
 <meta property="og:image" content="https://zhuangzhizhi.github.io/2018/01/14/establish-hexo-blog/TIM截图20180114201920.png">
 <meta property="og:image" content="https://zhuangzhizhi.github.io/2018/01/14/establish-hexo-blog/TIM截图20180114212649.png">
-<meta property="og:updated_time" content="2018-01-14T16:18:23.235Z">
+<meta property="og:updated_time" content="2018-01-14T16:35:34.015Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用GitHub Pages与Hexo搭建博客">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;搭建博客的前提是你要有一个github账号，github官网地址，Hexo官网地址，因为github pages只支持静态页面，所以可以使用hexo来生成静态页面.编写博客最好使用markdown来编辑，所以需要懂得markdown的语法，markdown语法比较简单，几分钟就可以入门,这里推荐简书的一篇markdown使用博文,markdown编辑器博主这里使">
@@ -408,7 +408,7 @@
 <p>编辑好md文件，执行以下命令，部署项目到github上</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Administrator@zzz-pc MINGW64 /d/hexo-blog</span><br><span class="line">$ hexo clean <span class="comment">#清除目录，一般可以不需要执行</span></span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line"></span><br><span class="line">Administrator@zzz-pc MINGW64 /d/hexo-blog</span><br><span class="line">$ hexo g    <span class="comment">#生成静态资源文件，generate</span></span><br><span class="line"></span><br><span class="line">INFO  Start processing</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">WARN  ========================= ATTENTION! ==========================</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">Administrator@zzz-pc MINGW64 /d/hexo-blog</span><br><span class="line">$ hexo d    <span class="comment">#使用git，部署项目到github仓库master分支上</span></span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from public folder...</span><br><span class="line">INFO  Copying files from extend <span class="built_in">dirs</span>...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <p>访问自己github pages上的url</p>
-<p>hexo常用命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean    <span class="comment">#Cleans the cache file (db.json) and generated files (public)</span></span><br><span class="line">$ hexo generate || hexo g  <span class="comment">#生成静态资源文件</span></span><br><span class="line">$ hexo deploy   || hexo d  <span class="comment">#部署项目 -g选项 部署前生成静态资源文件</span></span><br><span class="line">$ hexo new [layout] &lt;title&gt; </span><br><span class="line">$ hexo server   || hexo s   <span class="comment">#启动服务器 -p 指定启动端口</span></span><br></pre></td></tr></table></figure></p>
+<p>hexo常用命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean    <span class="comment">#Cleans the cache file (db.json) and generated files (public)</span></span><br><span class="line">$ hexo generate || hexo g  <span class="comment">#生成静态资源文件</span></span><br><span class="line">$ hexo deploy   || hexo d  <span class="comment">#部署项目 -g选项 部署前生成静态资源文件</span></span><br><span class="line">$ hexo new [layout] &lt;title&gt; </span><br><span class="line">$ hexo server   || hexo s   <span class="comment">#启动服务器 -p 指定启动端口</span></span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d    <span class="comment">#命令组合一起执行</span></span><br></pre></td></tr></table></figure></p>
 <p>hexo命令参考：hexo命令 <a href="https://hexo.io/docs/commands.html" target="_blank" rel="noopener">https://hexo.io/docs/commands.html</a></p>
 <p>其他主题参考：<a href="http://theme-next.iissnan.com/getting-started.html#theme-settings" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html#theme-settings</a></p>
 <p>博客搭建参考：<a href="https://www.jianshu.com/p/3f0d2d907ea0" target="_blank" rel="noopener">https://www.jianshu.com/p/3f0d2d907ea0</a></p>
@@ -444,8 +444,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/14/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/01/14/how-to-use-github/" rel="next" title="git安装及常用命令使用">
+                <i class="fa fa-chevron-left"></i> git安装及常用命令使用
               </a>
             
           </div>
@@ -454,8 +454,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/14/how-to-use-github/" rel="prev" title="git安装及常用命令使用">
-                git安装及常用命令使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/16/guawa-ratelimiter/" rel="prev" title="guawa-ratelimiter">
+                guawa-ratelimiter <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -533,7 +533,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -544,7 +544,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -555,7 +555,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

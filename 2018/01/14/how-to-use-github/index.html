@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="git客户端安装及关联github账户安装git客户端下载安装(git bash和git gui最好也安装上)git for windows 创建本地分支1234567891011$ git init dir  #初始化本地git仓库$ git add file  #添加工作区的file的修改到暂存区，注意是file的修改(文件的改动，新增，删除等操作都属于修改操作)，而不是修改后的file，gi">
+<meta name="description" content="git客户端安装及关联github账户安装git客户端下载安装(git bash和git gui最好也安装上)git for windows 创建本地分支12345678910111213141516$ git init dir  #初始化本地git仓库$ git add file  #添加工作区的file的修改到暂存区，注意是file的修改(文件的改动，新增，删除等操作都属于修改操作)，而不是修">
 <meta name="keywords" content="github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git安装及常用命令使用">
 <meta property="og:url" content="https://zhuangzhizhi.github.io/2018/01/14/how-to-use-github/index.html">
 <meta property="og:site_name" content="zhuangzhizhi&#39;s blog">
-<meta property="og:description" content="git客户端安装及关联github账户安装git客户端下载安装(git bash和git gui最好也安装上)git for windows 创建本地分支1234567891011$ git init dir  #初始化本地git仓库$ git add file  #添加工作区的file的修改到暂存区，注意是file的修改(文件的改动，新增，删除等操作都属于修改操作)，而不是修改后的file，gi">
+<meta property="og:description" content="git客户端安装及关联github账户安装git客户端下载安装(git bash和git gui最好也安装上)git for windows 创建本地分支12345678910111213141516$ git init dir  #初始化本地git仓库$ git add file  #添加工作区的file的修改到暂存区，注意是file的修改(文件的改动，新增，删除等操作都属于修改操作)，而不是修">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://zhuangzhizhi.github.io/2018/01/14/how-to-use-github/areas.png">
-<meta property="og:updated_time" content="2018-01-14T16:28:43.362Z">
+<meta property="og:updated_time" content="2018-01-20T16:45:45.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git安装及常用命令使用">
-<meta name="twitter:description" content="git客户端安装及关联github账户安装git客户端下载安装(git bash和git gui最好也安装上)git for windows 创建本地分支1234567891011$ git init dir  #初始化本地git仓库$ git add file  #添加工作区的file的修改到暂存区，注意是file的修改(文件的改动，新增，删除等操作都属于修改操作)，而不是修改后的file，gi">
+<meta name="twitter:description" content="git客户端安装及关联github账户安装git客户端下载安装(git bash和git gui最好也安装上)git for windows 创建本地分支12345678910111213141516$ git init dir  #初始化本地git仓库$ git add file  #添加工作区的file的修改到暂存区，注意是file的修改(文件的改动，新增，删除等操作都属于修改操作)，而不是修">
 <meta name="twitter:image" content="https://zhuangzhizhi.github.io/2018/01/14/how-to-use-github/areas.png">
 
 
@@ -366,8 +366,10 @@
 
       
         <h2 id="git客户端安装及关联github账户"><a href="#git客户端安装及关联github账户" class="headerlink" title="git客户端安装及关联github账户"></a>git客户端安装及关联github账户</h2><p>安装git客户端下载安装(git bash和git gui最好也安装上)<a href="http://gitforwindows.org/" target="_blank" rel="noopener">git for windows</a></p>
-<h2 id="创建本地分支"><a href="#创建本地分支" class="headerlink" title="创建本地分支"></a>创建本地分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ git init dir  <span class="comment">#初始化本地git仓库</span></span><br><span class="line">$ git add file  <span class="comment">#添加工作区的file的修改到暂存区，注意是file的修改(文件的改动，新增，删除等操作都属于修改操作)，而不是修改后的file，git基础原理中基本所有的提交都是增量提交，都是提交修改，而不是提交内容，而cvs如svn才是提交文件，git add . 则会把仓库下所有修改添加到暂存区</span></span><br><span class="line">$ git commit -m <span class="string">"提交说明"</span>  <span class="comment">#提交到本地仓库，就像提交到本地数据库，到本地磁盘上，但其他协作者还不能访问到修改的内容，要把本地仓库的修改push出去，其他协作者才能访问到修改内容，git是分三层的，工作区-暂存区-仓库，这一点跟svn很不一样</span></span><br><span class="line">$ git remote add origin https://github.com/zhuangzhizhi/zzz.git <span class="comment">#关联一个远程仓库，一个仓库可以拥有多个分支</span></span><br><span class="line">$ git pull -u origin master <span class="comment">#把远程仓库的更新修改拉回本地并且跟本地master分支合并</span></span><br><span class="line">$ git push -u origin master <span class="comment">#提交本地仓库的master分支的修改提交到远程master分支</span></span><br><span class="line">$ git checkout master   <span class="comment">#切换到master分支，切换到其他分支，相应的文件也会变为到该分支的状态</span></span><br><span class="line">$ git branch    <span class="comment">#查看分支</span></span><br><span class="line">$ git branch xxx <span class="comment">#创建分支xxx</span></span><br><span class="line">$ git remote rm origin <span class="comment">#删除仓库</span></span><br><span class="line">$ git status    <span class="comment">#查看仓库状态</span></span><br></pre></td></tr></table></figure>
+<h2 id="创建本地分支"><a href="#创建本地分支" class="headerlink" title="创建本地分支"></a>创建本地分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ git init dir  <span class="comment">#初始化本地git仓库</span></span><br><span class="line">$ git add file  <span class="comment">#添加工作区的file的修改到暂存区，注意是file的修改(文件的改动，新增，删除等操作都属于修改操作)，而不是修改后的file，git基础原理中基本所有的提交都是增量提交，都是提交修改，而不是提交内容，而cvs如svn才是提交文件，git add . 则会把仓库下所有修改添加到暂存区</span></span><br><span class="line">$ git commit -m <span class="string">"提交说明"</span>  <span class="comment">#提交到本地仓库，就像提交到本地数据库，到本地磁盘上，但其他协作者还不能访问到修改的内容，要把本地仓库的修改push出去，其他协作者才能访问到修改内容，git是分三层的，工作区-暂存区-仓库，这一点跟svn很不一样</span></span><br><span class="line">$ git remote add origin https://github.com/zhuangzhizhi/zzz.git <span class="comment">#关联一个远程仓库，一个仓库可以拥有多个分支</span></span><br><span class="line">$ git pull origin master <span class="comment">#把远程仓库的更新修改拉回本地并且跟本地master分支合并</span></span><br><span class="line">$ git push origin master <span class="comment">#提交本地仓库的master分支的修改提交到远程master分支</span></span><br><span class="line">$ git checkout master   <span class="comment">#切换到master分支，切换到其他分支，相应的文件也会变为到该分支的状态</span></span><br><span class="line">$ git branch    <span class="comment">#查看分支</span></span><br><span class="line">$ git branch xxx <span class="comment">#创建分支xxx</span></span><br><span class="line">$ git remote rm origin <span class="comment">#删除仓库</span></span><br><span class="line">$ git status    <span class="comment">#查看仓库状态</span></span><br><span class="line">$ git cat-file -p hashcode  <span class="comment">#根据hash值来查询某次提交的内容</span></span><br><span class="line">$ git <span class="built_in">hash</span>-object xxx   <span class="comment">#查看xxx文件的hash值</span></span><br><span class="line">$ git <span class="built_in">log</span> --oneline --decorate --graph --all    <span class="comment">#查看各个分支的最新提交</span></span><br><span class="line">$ git show </span><br><span class="line">$ git diff</span><br></pre></td></tr></table></figure>
 <h2 id="git基础原理"><a href="#git基础原理" class="headerlink" title="git基础原理"></a>git基础原理</h2><p><img src="/2018/01/14/how-to-use-github/areas.png" alt="git The Three States"></p>
+<h2 id="git的四种对象-blob-tree-commit-tag"><a href="#git的四种对象-blob-tree-commit-tag" class="headerlink" title="git的四种对象(blob tree commit tag)"></a>git的四种对象(blob tree commit tag)</h2><p>四种对象用一个39位的hash值(2(文件夹名字)+38(文件名))来作为唯一标记</p>
+<h2 id="blob"><a href="#blob" class="headerlink" title="blob"></a>blob</h2><p>当修改，新增文件被提交到暂存区stage时(创建文件夹时提交不了)，.git/objects/ 目录下创建修改或者新增的增量记录，一个文件一个文件夹，当commit到仓库时，创建一个commit对象，里面包含着一个tree对象，tree对象包含着这次的提交内容，提交内容若有文件夹则会另外创建一个tree对象包含着这个目录下的提交内容(以上的commit对象，tree对象，blob对象都由一个hash值来唯一标识，若有两个文件内容相同的时候，只会创建一个blob对象，即blob对象不存储提交的文件信息，只存储文件内容)</p>
 
       
     </div>
@@ -398,8 +400,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/14/establish-hexo-blog/" rel="next" title="使用GitHub Pages与Hexo搭建博客">
-                <i class="fa fa-chevron-left"></i> 使用GitHub Pages与Hexo搭建博客
+              <a href="/2018/01/14/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -407,6 +409,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/14/establish-hexo-blog/" rel="prev" title="使用GitHub Pages与Hexo搭建博客">
+                使用GitHub Pages与Hexo搭建博客 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -483,7 +489,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -494,7 +500,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -505,7 +511,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -538,7 +544,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git客户端安装及关联github账户"><span class="nav-number">1.</span> <span class="nav-text">git客户端安装及关联github账户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建本地分支"><span class="nav-number">2.</span> <span class="nav-text">创建本地分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git基础原理"><span class="nav-number">3.</span> <span class="nav-text">git基础原理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git客户端安装及关联github账户"><span class="nav-number">1.</span> <span class="nav-text">git客户端安装及关联github账户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建本地分支"><span class="nav-number">2.</span> <span class="nav-text">创建本地分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git基础原理"><span class="nav-number">3.</span> <span class="nav-text">git基础原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git的四种对象-blob-tree-commit-tag"><span class="nav-number">4.</span> <span class="nav-text">git的四种对象(blob tree commit tag)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#blob"><span class="nav-number">5.</span> <span class="nav-text">blob</span></a></li></ol></div>
             
 
           </div>
