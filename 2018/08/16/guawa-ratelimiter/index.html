@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://zhuangzhizhi.github.io/2018/08/16/guawa-ratelimiter/令牌桶工作流.jpg">
 <meta property="og:image" content="https://zhuangzhizhi.github.io/2018/08/16/guawa-ratelimiter/漏桶算法.png">
-<meta property="og:updated_time" content="2018-08-16T08:40:46.965Z">
+<meta property="og:updated_time" content="2018-08-16T12:55:36.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="guava-ratelimiter">
 <meta name="twitter:description" content="限流算法:令牌桶算法和漏桶算法令牌桶算法令牌桶算法是网络流量整形（Traffic Shaping）和速率限制（Rate Limiting）中最常使用的一种算法。典型情况下，令牌桶算法用来控制发送到网络上的数据的数目，并允许突发数据的发送。 工作流程工作过程包括3个阶段：产生令牌、消耗令牌和判断数据包是否通过。其中涉及到2个参数：令牌产生的速率CIR（Committed Information Ra">
@@ -385,7 +385,7 @@
 <li>acquire()可以预消费permits(允许令牌桶内的令牌少于准备消费的令牌)，但下次的acquire()方法需要等到令牌桶内的令牌数量够了才能返回，不然一直阻塞该方法</li>
 <li>每个acquire()方法都是通过计算得出此次需要等待时间(通过目前令牌数，所需令牌数，和令牌产生速率)，和下次允许访问时间，然后线程Thread.sleep等待时长，通过这样来进行线程阻塞</li>
 </ol>
-
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><h3 id="接口限流算法（关于临界点处理）https-blog-csdn-net-ljj821061514-article-details-52512943"><a href="#接口限流算法（关于临界点处理）https-blog-csdn-net-ljj821061514-article-details-52512943" class="headerlink" title="接口限流算法（关于临界点处理）https://blog.csdn.net/ljj821061514/article/details/52512943"></a>接口限流算法（关于临界点处理）<a href="https://blog.csdn.net/ljj821061514/article/details/52512943" target="_blank" rel="noopener">https://blog.csdn.net/ljj821061514/article/details/52512943</a></h3>
       
     </div>
     
@@ -424,6 +424,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/19/markdown-study/" rel="prev" title="markdown study">
+                markdown study <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -500,7 +504,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -511,7 +515,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -522,7 +526,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -555,7 +559,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#限流算法-令牌桶算法和漏桶算法"><span class="nav-number">1.</span> <span class="nav-text">限流算法:令牌桶算法和漏桶算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#令牌桶算法"><span class="nav-number">1.1.</span> <span class="nav-text">令牌桶算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作流程"><span class="nav-number">1.1.1.</span> <span class="nav-text">工作流程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#漏桶算法"><span class="nav-number">1.2.</span> <span class="nav-text">漏桶算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#设计思路"><span class="nav-number">1.2.1.</span> <span class="nav-text">设计思路</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#限流算法实现"><span class="nav-number">2.</span> <span class="nav-text">限流算法实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#java令牌桶算法"><span class="nav-number">2.1.</span> <span class="nav-text">java令牌桶算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java漏桶算法实现"><span class="nav-number">2.2.</span> <span class="nav-text">java漏桶算法实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#guava-ratelimiter源码分析"><span class="nav-number">3.</span> <span class="nav-text">guava ratelimiter源码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#acquire-方法-获取permit"><span class="nav-number">3.1.</span> <span class="nav-text">acquire()方法(获取permit)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#限流算法-令牌桶算法和漏桶算法"><span class="nav-number">1.</span> <span class="nav-text">限流算法:令牌桶算法和漏桶算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#令牌桶算法"><span class="nav-number">1.1.</span> <span class="nav-text">令牌桶算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作流程"><span class="nav-number">1.1.1.</span> <span class="nav-text">工作流程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#漏桶算法"><span class="nav-number">1.2.</span> <span class="nav-text">漏桶算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#设计思路"><span class="nav-number">1.2.1.</span> <span class="nav-text">设计思路</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#限流算法实现"><span class="nav-number">2.</span> <span class="nav-text">限流算法实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#java令牌桶算法"><span class="nav-number">2.1.</span> <span class="nav-text">java令牌桶算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java漏桶算法实现"><span class="nav-number">2.2.</span> <span class="nav-text">java漏桶算法实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#guava-ratelimiter源码分析"><span class="nav-number">3.</span> <span class="nav-text">guava ratelimiter源码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#acquire-方法-获取permit"><span class="nav-number">3.1.</span> <span class="nav-text">acquire()方法(获取permit)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#接口限流算法（关于临界点处理）https-blog-csdn-net-ljj821061514-article-details-52512943"><span class="nav-number">5.1.</span> <span class="nav-text">接口限流算法（关于临界点处理）https://blog.csdn.net/ljj821061514/article/details/52512943</span></a></li></ol></li></ol></div>
             
 
           </div>
